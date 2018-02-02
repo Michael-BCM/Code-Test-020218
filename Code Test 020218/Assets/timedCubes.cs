@@ -1,14 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 
-public class timedCubes : MonoBehaviour
+public class TimedCubes : MonoBehaviour
 {
+    private bool spawnCubeOnce;
+
     [SerializeField]
     private Text dateTime;
-
-    private bool spawnCubeOnce;
 
     [SerializeField]
     private GameObject prefab;
@@ -21,7 +21,6 @@ public class timedCubes : MonoBehaviour
     
     private void Update()
     {
-
         dateTime.text = DateTime.UtcNow.ToLongTimeString();
 
         if(DateTime.UtcNow.Second % 2 == 0 && !spawnCubeOnce)

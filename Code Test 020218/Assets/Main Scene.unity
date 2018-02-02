@@ -458,8 +458,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e973e3a5e11444341a1225c748970e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadingPanel: {fileID: 1313421850}
-  fadingPanel2: {fileID: 735204030}
+  fadingPanel0: {fileID: 1313421850}
+  fadingPanel1: {fileID: 735204030}
   view1Canvas: {fileID: 1329918619}
   view2Canvas: {fileID: 1978181121}
 --- !u!4 &554918456
@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 735204031}
   - component: {fileID: 735204030}
   m_Layer: 5
-  m_Name: Fading Panel 2
+  m_Name: Fading Panel 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -705,7 +705,7 @@ GameObject:
   - component: {fileID: 1313421851}
   - component: {fileID: 1313421850}
   m_Layer: 5
-  m_Name: Fading Panel
+  m_Name: Fading Panel 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -774,7 +774,7 @@ GameObject:
   - component: {fileID: 1329918621}
   - component: {fileID: 1329918620}
   m_Layer: 5
-  m_Name: View 1 Canvas
+  m_Name: View 0 Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -935,7 +935,7 @@ GameObject:
   - component: {fileID: 1978181123}
   - component: {fileID: 1978181122}
   m_Layer: 5
-  m_Name: View 2 Canvas
+  m_Name: View 1 Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

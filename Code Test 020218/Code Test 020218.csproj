@@ -326,7 +326,7 @@
   <ItemGroup>
     <Compile Include="Assets\Cube.cs" />
     <Compile Include="Assets\Fader.cs" />
-    <Compile Include="Assets\timedCubes.cs" />
+    <Compile Include="Assets\TimedCubes.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

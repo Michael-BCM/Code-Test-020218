@@ -4,19 +4,13 @@ using UnityEngine.UI;
 
 public class Fader : MonoBehaviour
 {
-    [SerializeField]
-    private Image fadingPanel;
-
-    [SerializeField]
-    private Image fadingPanel2;
-
     private float panelAlpha = 0;
 
     [SerializeField]
-    private GameObject view1Canvas;
+    private Image fadingPanel0, fadingPanel1;
 
     [SerializeField]
-    private GameObject view2Canvas;
+    private GameObject view1Canvas, view2Canvas;
     
     public void StartFadingView1 ()
     {
@@ -25,10 +19,12 @@ public class Fader : MonoBehaviour
     
     private IEnumerator UIImageFaderView1 ()
     {
-        while(fadingPanel.color.a < 1)
+        while(fadingPanel0.color.a < 1)
         {
             panelAlpha += Time.deltaTime;
 
+            fadingPanel0.color = new Color(fadingPanel0.color.r, fadingPanel0.color.g, fadingPanel0.color.b, panelAlpha);
+            
             yield return 0;
         }
         view1Canvas.SetActive(false);
@@ -38,18 +34,13 @@ public class Fader : MonoBehaviour
 
     private IEnumerator UIImageFaderView2()
     {
-        while(fadingPanel2.color.a > 0)
+        while(fadingPanel1.color.a > 0)
         {
             panelAlpha -= Time.deltaTime;
 
+            fadingPanel1.color = new Color(fadingPanel1.color.r, fadingPanel1.color.g, fadingPanel1.color.b, panelAlpha);
+            
             yield return 0;
         }
-    }
-
-    private void Update()
-    {
-        fadingPanel.color = new Color(fadingPanel.color.r, fadingPanel.color.g, fadingPanel.color.b, panelAlpha);
-
-        fadingPanel2.color = new Color(fadingPanel2.color.r, fadingPanel2.color.g, fadingPanel2.color.b, panelAlpha);
     }
 }
